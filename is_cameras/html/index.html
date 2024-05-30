@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Cameras</title>
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+        <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v6.4.0/css/pro.min.css">
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+		<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+	</head>
+	<body>
+		<div class="loading"></div>
+		<div class="container">
+			<div class="add-button" id="add-button" onclick="addCamera()">Add camera</div>
+			<div class="map" id="map"></div>
+			<div class="cameras" id="cameras"></div>
+			<h2>Cameras</h2>
+		</div>
+		<div class="popup">
+			<div class="box">
+				<div class="close" onclick="closePopup()"><i class="fa-solid fa-xmark"></i></div>
+				<h2>Add camera</h2>
+				<div class="inputs">
+					<div class="input">
+						<span>Camera name</span>
+						<input type="text" id="camName">
+					</div>
+					<div class="input">
+						<span>Camera type</span>
+						<select id="camType">
+							<option value="prop_cctv_cam_01a">prop_cctv_cam_01a</option>
+							<option value="prop_cctv_cam_06a">prop_cctv_cam_06a</option>
+							<option value="prop_cctv_cam_04c">prop_cctv_cam_04c</option>
+						</select>
+					</div>
+				</div>
+				<div class="button" onclick="addCameraFunc()">Add</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="app.js"></script>
+</html>

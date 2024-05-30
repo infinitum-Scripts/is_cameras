@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+	user-select: none;
+}
+
+/* body{
+	width: 100%;
+	height: 100%;
+	background: url('https://i.pinimg.com/originals/22/8d/22/228d229e4a8125c43951ed44bf0da7eb.jpg');
+	background-size: cover;
+} */
+
+.loading{
+	position: absolute;
+	opacity: 0;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	background: url('https://cdn.discordapp.com/attachments/1012430223662383144/1211782505791889408/image.png?ex=65ef7367&is=65dcfe67&hm=fac18aa93bda1baec541a641f0e5ce29c145d7842c0cabcb92319725f9837879&');
+	background-size: 100% 100%;
+}
+
+.container{
+	position: absolute;
+	display: none;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 60vw;
+	height: 60vh;
+	background-color: rgb(22, 22, 22);
+	border-radius: 10px;
+}
+
+.container > .map{
+	position: absolute;
+	top: 50%;
+	left: 22%;
+	transform: translate(-50%, -50%);
+	width: 40%;
+	height: 90%;
+	border: 1px solid rgb(33, 33, 33);
+	overflow: hidden;
+}
+
+.map-icon{
+	color: red;
+}
+
+.container > .add-button{
+	position: absolute;
+	bottom: 2%;
+	right: 2%;
+	width: fit-content;
+	padding: .2vw .5vw;
+	background-color: rgb(44, 44, 44);
+	text-align: center;
+	color: white;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.container > .cameras{
+	position: absolute;
+	width: 50%;
+	height: 80%;
+	right: 5%;
+	top: 50%;
+	transform: translateY(-50%);
+	overflow: auto;
+	border: 2px solid rgb(44, 44, 44);
+	border-radius: 5px;
+}
+
+.container > .cameras::-webkit-scrollbar{
+	width: 5px;
+}
+
+.container > .cameras::-webkit-scrollbar-thumb{
+	background-color: rgb(22, 22, 22);
+	border-radius: 50px;
+}
+
+.container > h2{
+	position: absolute;
+	top: 3%;
+	left: 50%;
+	transform: translateX(-50%);
+	color: white;
+}
+
+.container > .cameras > .camera{
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 90%;
+	height: 10%;
+	background-color: rgb(33, 33, 33);
+	border-radius: 5px;
+	margin-top: .5vw;
+	display: flex;
+	align-items: center;
+	cursor:auto;
+}
+
+.container > .cameras > .camera > span{
+	color: white;
+	margin-left: 1vw;
+	width: 75%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.container > .cameras > .camera > .remove-button{
+	position: absolute;
+	right: 2%;
+	padding: .1vw .6vw;
+	background-color: rgb(255, 0, 0);
+	border-radius: 5px;
+	color: white;
+	cursor: pointer;
+	z-index: 9999;
+}
+
+/* ADD CAMERA POPUP */
+
+.popup{
+	position: absolute;
+	display: none;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.75);
+	z-index: 9999;
+}
+
+.popup > .box{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 25vw;
+	height: 25vh;
+	background-color: rgb(22, 22, 22);
+	border-radius: 10px;
+}
+
+.popup > .box > h2{
+	position: absolute;
+	top: 5%;
+	left: 5%;
+	color: white;
+}
+
+.popup > .box > .inputs{
+	position: absolute;
+	top: 55%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 90%;
+	height: 70%;
+}
+
+.popup > .box > .inputs > .input{
+	position: relative;
+	margin-top: .6vw;
+}
+
+.popup > .box > .inputs > .input > span{
+	color: white;
+	font-weight: 600;
+	margin-left: .2vw;
+}
+
+.popup > .box > .inputs > .input > input{
+	display: block;
+	width: 20.9vw;
+	padding: .4vw .5vw;
+	background-color: rgb(33, 33, 33);
+	border: 2px solid rgb(44, 44, 44);
+	border-radius: 10px;
+	outline: none;
+	color: white;
+	margin-top: .2vw;
+}
+
+.popup > .box > .inputs > .input > select{
+	display: block;
+	width: 22vw;
+	padding: .4vw .5vw;
+	background-color: rgb(33, 33, 33);
+	border: 2px solid rgb(44, 44, 44);
+	border-radius: 10px;
+	outline: none;
+	color: white;
+	margin-top: .2vw;
+}
+
+.popup > .box > .button{
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 5%;
+	padding: .2vw .5vw;
+	background-color: rgb(55, 55, 55);
+	color: white;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.popup > .box > .close{
+	position: absolute;
+	right: 2%;
+	top: 2%;
+	color: white;
+	cursor: pointer;
+	transition: .2s;
+}
+
+.popup > .box > .close:hover{
+	color: rgb(255, 0, 0);
+}
